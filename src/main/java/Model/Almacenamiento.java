@@ -9,65 +9,77 @@ import java.sql.Connection;
 import java.util.ArrayList;
 
 public class Almacenamiento {
-    private int Id_alma;
-    private String Modelo;
-    private int Capacidad;
-    private int Precio;
+        private int idAlma;
+        private String modelo;
+        private String capacidad;
+        private String precio;
+        private String tipo;
 
-    public Almacenamiento(int id_alma, String modelo, int capacidad, int precio) {
-        Id_alma = id_alma;
-        Modelo = modelo;
-        Capacidad = capacidad;
-        Precio = precio;
+    public Almacenamiento(int idAlma, String modelo, String capacidad, String precio, String tipo) {
+        this.idAlma = idAlma;
+        this.modelo = modelo;
+        this.capacidad = capacidad;
+        this.precio = precio;
+        this.tipo = tipo;
     }
 
-    public int getId_alma() {
-        return Id_alma;
+    public int getIdAlma() {
+        return idAlma;
     }
 
-    public void setId_alma(int id_alma) {
-        Id_alma = id_alma;
+    public void setIdAlma(int idAlma) {
+        this.idAlma = idAlma;
     }
 
     public String getModelo() {
-        return Modelo;
+        return modelo;
     }
 
     public void setModelo(String modelo) {
-        Modelo = modelo;
+        this.modelo = modelo;
     }
 
-    public int getCapacidad() {
-        return Capacidad;
+    public String getCapacidad() {
+        return capacidad;
     }
 
-    public void setCapacidad(int capacidad) {
-        Capacidad = capacidad;
+    public void setCapacidad(String capacidad) {
+        this.capacidad = capacidad;
     }
 
-    public int getPrecio() {
-        return Precio;
+    public String getPrecio() {
+        return precio;
     }
 
-    public void setPrecio(int precio) {
-        Precio = precio;
+    public void setPrecio(String precio) {
+        this.precio = precio;
     }
-    public boolean agregarAlmacenamiento(){
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public boolean registrarAlma(){
         Connection connection = DBConnector.connection("jbem","root","");
         DSLContext query = DSL.using(connection);
-        return  new almacenamientoDAO().agregarAlma(this, query);
+        return new almacenamientoDAO().registrarAlma(this, query);
     }
     public ArrayList<Almacenamiento> buscarAlma(){
-        Connection connection = DBConnector.connection("jbem", "root","");
+        System.out.println("buscarAlma");
+        Connection connection = DBConnector.connection("jbem","root","");
         DSLContext query = DSL.using(connection);
-        System.out.println("asds");
-        return new almacenamientoDAO().buscarAlma(this, query);
+        ArrayList<Almacenamiento> almacenamientos = new almacenamientoDAO().buscarAlma(this,query);
+        System.out.println("Ya se obtuvieron los almacenamientos");
+        return almacenamientos;
     }
 
-    public boolean modificarAlma(){
-        Connection connection = DBConnector.connection("jbem", "root", "");
+    public boolean eliminarAlma(){
+        Connection connection = DBConnector.connection("jbem","root","");
         DSLContext query = DSL.using(connection);
-        System.out.println("ddda");
-        return new almacenamientoDAO().modificarAlma(this, query);
+        return new almacenamientoDAO().eliminarAlma(query,this);
     }
+
 }
