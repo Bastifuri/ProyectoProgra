@@ -11,18 +11,19 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
 
-@WebServlet
+@WebServlet(name = "BuscarAlmaServlet", value = ("/buscarAlma"))
 public class BuscarAlmaServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        String modelo = request.getParameter("modelo").toString();
+    public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+        String modelo = request.getParameter("modelo");
+        String capacidad = request.getParameter("capacidad");
+        String precio = request.getParameter("precio");
+        String tipo = request.getParameter("tipo");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/buscarAlma.jsp");
-        if (!modelo.isEmpty()) {
-            Almacenamiento almacenamiento = new Almacenamiento(0, modelo, 0, 0);
+        if (!modelo.isEmpty() || !capacidad.isEmpty() || precio.isEmpty() || tipo.isEmpty()){
+            Almacenamiento almacenamiento = new Almacenamiento(0,modelo,capacidad,precio,tipo);
             ArrayList<Almacenamiento> almacenamientos = almacenamiento.buscarAlma();
-            if (almacenamientos.size() != 0) {
-                request.setAttribute("almacenamientos", almacenamiento);
+            if (almacenamientos.size()!=0){
+                request.setAttribute("almacenamientos",almacenamientos);
             }
         }
     }
