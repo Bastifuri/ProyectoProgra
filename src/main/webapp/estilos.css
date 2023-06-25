@@ -1,0 +1,50 @@
+.custom-header {
+    background-color: #333333;
+    padding: 0px;
+}
+
+.custom-header p {
+    font-size: 6px;
+}
+
+.navbar {
+    flex-direction: column;
+}
+
+.navbar .nav-item {
+    margin-bottom: 10px;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.color-navbar {
+    background-color: #1F1D9C;
+}
+
+.footer {
+    background-color: #1F1D9C;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer h4 {
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
