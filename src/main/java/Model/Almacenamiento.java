@@ -9,77 +9,65 @@ import java.sql.Connection;
 import java.util.ArrayList;
 
 public class Almacenamiento {
-        private int idAlma;
-        private String modelo;
-        private String capacidad;
-        private String precio;
-        private String tipo;
+    private int Id_alma;
+    private String Modelo;
+    private int Capacidad;
+    private int Precio;
 
-    public Almacenamiento(int idAlma, String modelo, String capacidad, String precio, String tipo) {
-        this.idAlma = idAlma;
-        this.modelo = modelo;
-        this.capacidad = capacidad;
-        this.precio = precio;
-        this.tipo = tipo;
+    public Almacenamiento(int id_alma, String modelo, int capacidad, int precio) {
+        Id_alma = id_alma;
+        Modelo = modelo;
+        Capacidad = capacidad;
+        Precio = precio;
     }
 
-    public int getIdAlma() {
-        return idAlma;
+    public int getId_alma() {
+        return Id_alma;
     }
 
-    public void setIdAlma(int idAlma) {
-        this.idAlma = idAlma;
+    public void setId_alma(int id_alma) {
+        Id_alma = id_alma;
     }
 
     public String getModelo() {
-        return modelo;
+        return Modelo;
     }
 
     public void setModelo(String modelo) {
-        this.modelo = modelo;
+        Modelo = modelo;
     }
 
-    public String getCapacidad() {
-        return capacidad;
+    public int getCapacidad() {
+        return Capacidad;
     }
 
-    public void setCapacidad(String capacidad) {
-        this.capacidad = capacidad;
+    public void setCapacidad(int capacidad) {
+        Capacidad = capacidad;
     }
 
-    public String getPrecio() {
-        return precio;
+    public int getPrecio() {
+        return Precio;
     }
 
-    public void setPrecio(String precio) {
-        this.precio = precio;
+    public void setPrecio(int precio) {
+        Precio = precio;
     }
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public boolean registrarAlma(){
+    public boolean agregarAlmacenamiento(){
         Connection connection = DBConnector.connection("jbem","root","");
         DSLContext query = DSL.using(connection);
-        return new almacenamientoDAO().registrarAlma(this, query);
+        return  new almacenamientoDAO().agregarAlma(this, query);
     }
     public ArrayList<Almacenamiento> buscarAlma(){
-        System.out.println("buscarAlma");
-        Connection connection = DBConnector.connection("jbem","root","");
+        Connection connection = DBConnector.connection("jbem", "root","");
         DSLContext query = DSL.using(connection);
-        ArrayList<Almacenamiento> almacenamientos = new almacenamientoDAO().buscarAlma(this,query);
-        System.out.println("Ya se obtuvieron los almacenamientos");
-        return almacenamientos;
+        System.out.println("asds");
+        return new almacenamientoDAO().buscarAlma(this, query);
     }
 
-    public boolean eliminarAlma(){
-        Connection connection = DBConnector.connection("jbem","root","");
+    public boolean modificarAlma(){
+        Connection connection = DBConnector.connection("jbem", "root", "");
         DSLContext query = DSL.using(connection);
-        return new almacenamientoDAO().eliminarAlma(query,this);
+        System.out.println("ddda");
+        return new almacenamientoDAO().modificarAlma(this, query);
     }
-
 }
