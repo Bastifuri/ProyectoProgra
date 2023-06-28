@@ -40,6 +40,7 @@ public class almacenamientoDAO {
         String modeloAlma = almacenamiento.getModelo();
         String capacidadAlma = almacenamiento.getCapacidad();
         String tipoAlma = almacenamiento.getTipo();
+
         Result<Record> result = query.select().from(DSL.table("almacenamientos")).where(
                 DSL.field("modelo").eq(modeloAlma)).or(DSL.field("capacidad").eq(capacidadAlma)).or(DSL.field("tipo").eq(tipoAlma)).fetch();
         ArrayList<Almacenamiento> almacenamientos = new ArrayList<>();

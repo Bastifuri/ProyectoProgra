@@ -13,18 +13,24 @@ import java.util.ArrayList;
 
 @WebServlet(name = "BuscarAlmaServlet", value = ("/buscarAlma"))
 public class BuscarAlmaServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    try {
         String modelo = request.getParameter("modelo");
         String capacidad = request.getParameter("capacidad");
         String precio = request.getParameter("precio");
         String tipo = request.getParameter("tipo");
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/buscarAlma.jsp");
-        if (!modelo.isEmpty() || !capacidad.isEmpty() || precio.isEmpty() || tipo.isEmpty()){
-            Almacenamiento almacenamiento = new Almacenamiento(0,modelo,capacidad,precio,tipo);
+        if (!modelo.isEmpty() || !capacidad.isEmpty() || !tipo.isEmpty()) {
+            Almacenamiento almacenamiento = new Almacenamiento(0, modelo, capacidad, precio, tipo);
             ArrayList<Almacenamiento> almacenamientos = almacenamiento.buscarAlma();
-            if (almacenamientos.size()!=0){
-                request.setAttribute("almacenamientos",almacenamientos);
+            if (almacenamientos.size() != 0) {
+                request.setAttribute("almacenamientos", almacenamientos);
+                System.out.println("aasdas");
             }
+        }
+    }catch (Exception e){
+        e.printStackTrace();
         }
     }
 }

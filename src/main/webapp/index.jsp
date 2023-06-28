@@ -9,17 +9,14 @@
     <title>JBEM-Tienda de Hardware</title>
     <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <style>
-
-    </style>
-</head>
 <body>
 
 <!--encabezado-->
-<header class="container-fluid custom-header
-d-flex justify-content-center">
+<header class="container-fluid custom-header d-flex justify-content-center">
     <p class="mb-0 fs-6"><a href="mailto://soporte@jbem.cl" title="Escribenos" style="color: white"> Escribenos a soporte@jbem.cl ! </a></p>
 </header>
+
+            <!---------------------------------------------------------------------------------------->
 
 <!--Menu de pagina-->
 <nav class="navbar navbar-expand-lg color-navbar">
@@ -99,14 +96,73 @@ d-flex justify-content-center">
                 </li>
             </ul>
 
-            <!--Busqueda-->
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="¿Qué buscas?" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Buscar</button>
-            </form>
+            <!---------------------------------------------------------------------------------------->
+
+            <!-- Boton modal login -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Iniciar Sesión
+            </button>
+
+            <!-- Modal para ingresar con una cuenta-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Por favor ingrese sus datos debajo</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="logearusuario" method="post">
+                                <input type="text" name="rut" placeholder="RUT" required><br>
+                                <input type="password" name="password" placeholder="Contraseña" required><br>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Iniciar sesión</button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Registrate</button>
+                                </div>
+                                <p>${errorMensaje}</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Pop Up para registrarse-->
+
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Registro</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!--Campos para ingresar los datos-->
+
+                        <div class="modal-body">
+                            <form action="agregarusuario" method="post" class="text-center">
+                                <div class="form-group">
+                                    <input placeholder="Ingrese su Rut" name="rut" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input placeholder="Ingrese su nombre" name="nombre" type="text" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input placeholder="Ingrese su contraseña" name="password" type="password" class="form-control">
+                                </div>
+                                <br>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Registrar</button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cerrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </nav>
+            <!---------------------------------------------------------------------------------------->
 
 </br>
 <div class="container">
@@ -158,6 +214,10 @@ d-flex justify-content-center">
 <div>
     <a href="buscarAlma.jsp">Buscar producto</a>
 </div>
+
+            <!---------------------------------------------------------------------------------------->
+
+
     <!--Seccion fotos-->
 <br>
 <h2 align="center">Ofertas imperdibles</h2>
@@ -174,6 +234,10 @@ d-flex justify-content-center">
     </div>
 </div>
 </div>
+<br>
+
+            <!---------------------------------------------------------------------------------------->
+
 
 <br/>
 <!--Pie de pagina-->
@@ -208,6 +272,7 @@ d-flex justify-content-center">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </div>
 </body>
 </html>

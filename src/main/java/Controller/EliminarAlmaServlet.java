@@ -14,7 +14,7 @@ import java.io.IOException;
 public class EliminarAlmaServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response){
         int idAlma = Integer.parseInt(request.getParameter("idAlma"));
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("buscarAlma");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/buscarAlma.jsp");
         Almacenamiento almacenamiento = new Almacenamiento(idAlma,"","","","");
         if(almacenamiento.eliminarAlma()){
             request.setAttribute("status", "Se ha eliminado correctamente el almacenamiento");
