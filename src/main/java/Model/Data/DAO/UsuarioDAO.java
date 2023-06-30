@@ -12,8 +12,8 @@ import static org.jooq.impl.DSL.*;
 
 public class UsuarioDAO {
     public boolean registrarUsuario(Usuario usuario, DSLContext query) {
-        String nombre = usuario.getNombre();
         String rut = usuario.getRut();
+        String nombre = usuario.getNombre();
         String password = usuario.getPassword();
         Table usuarioTabla = table(name("usuario"));
         Field[] columnas = usuarioTabla.fields(

@@ -143,17 +143,17 @@
                         <div class="modal-body">
                             <form action="agregarusuario" method="post" class="text-center">
                                 <div class="form-group">
-                                    <input placeholder="Ingrese su Rut" name="rut" type="text" class="form-control">
+                                    <input placeholder="Ingrese su nombre" name="rut" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <input placeholder="Ingrese su nombre" name="nombre" type="text" class="form-control">
+                                    <input placeholder="Ingrese su rut" name="nombre" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <input placeholder="Ingrese su contraseña" name="password" type="password" class="form-control">
                                 </div>
                                 <br>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Registrar</button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Registrate</button>
                                     <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cerrar</button>
                                 </div>
                             </form>

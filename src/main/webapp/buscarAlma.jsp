@@ -106,17 +106,42 @@ d-flex justify-content-center">
   </div>
 </nav>
 
-<main>
-  <section>
-    <article class="b-form">
-      <form action="buscarAlma" method="post">
-        <input placeholder="Ingrese el modelo" name="modelo" type="text">
-          <input placeholder="Ingrese la capacidad" name="capacidad" type="text">
-          <input placeholder="Ingrese el tipo" name="tipo" type="text">
-        <button type="submit">Buscar</button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 align="center">Agregar Disco Duro</h2>
+      <form action="agregarAlma" method="post">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Agregue el modelo:</span>
+          <input id="modelo" name="modelo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Indique la capacidad:</span>
+          <input id="capacidad" name="capacidad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+        </div>
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text">Agregue el precio:</span>
+          <input id="precio" name="precio" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" required>
+        </div>
+        <select id="tipo" name="tipo" class="form-select form-select-sm" aria-label="Default select example" required>
+          <option align="center" selected>Indique el tipo de Disco duro</option>
+          <option align="center" value="HDD">HDD</option>
+          <option align="center" value="SDD">SDD</option>
+        </select>
+        <br>
+        <button type="submit" class="btn btn-success">Agregar</button>
       </form>
-    </article>
-  </section>
+
+<!-----------------   Busqueda de alma    ------------------->
+      <h2 align="center">Ingrese algún campo para buscar y eliminar</h2>
+<main>
+  <form action="buscarAlma" method="post">
+    <input placeholder="Busqueda por modelo" name="modelo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    <input placeholder="Busqueda por cantidad" name="capacidad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    <input placeholder="Busqueda por el tipo" name="tipo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    <br>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+  </form>
   <%
     String mensaje = (String) request.getAttribute("status");
     if (mensaje != null && !mensaje.isEmpty()) {
@@ -149,7 +174,9 @@ d-flex justify-content-center">
 </table>
 </section>
   <br>
-  <a href="index.jsp">volver</a>
+    </div>
+  </div>
+</div>
 
 </main>
 </body>

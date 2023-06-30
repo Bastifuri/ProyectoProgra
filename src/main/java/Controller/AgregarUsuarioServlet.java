@@ -27,8 +27,7 @@ public class AgregarUsuarioServlet  extends HttpServlet {
              Usuario usuario = new Usuario(rut, nombre, password);
              if (usuario.registrarUsuario()){
                  request.setAttribute("status", "El registro se completo correctamente");
-             }else {
-                 request.setAttribute("status", "El rut ingresado ya esta registrado");
+                 requestDispatcher.forward(request,response);
              }
          }else{
              request.setAttribute("status", "Complete todos los campos");
