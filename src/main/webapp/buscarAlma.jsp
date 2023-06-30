@@ -101,10 +101,7 @@ d-flex justify-content-center">
       </ul>
 
       <!--Busqueda-->
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="¿Qué buscas?" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
+      <h6 class="text-light">Bienvenido Administrador</h6>
     </div>
   </div>
 </nav>
@@ -128,8 +125,6 @@ d-flex justify-content-center">
   <%
     }
   %>
-
-
 <br>
 <section>
 <table class="table">

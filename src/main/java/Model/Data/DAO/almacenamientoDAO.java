@@ -7,7 +7,6 @@ import org.jooq.Result;
 import org.jooq.impl.DSL;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class almacenamientoDAO {
     public boolean registrarAlma(Almacenamiento almacenamiento, DSLContext query) {
@@ -15,12 +14,17 @@ public class almacenamientoDAO {
         String capacidadAlma = almacenamiento.getCapacidad();
         String precioAlma = almacenamiento.getPrecio();
         String tipoAlma = almacenamiento.getTipo();
-        int result = query.insertInto(DSL.table("almacenamientos"),
-                DSL.field("idAlma"),
-                DSL.field("modelo"),
-                DSL.field("capacidad"),
-                DSL.field("precio"),
-                DSL.field("tipo")).values(0,modeloAlma,capacidadAlma,precioAlma,tipoAlma).execute();
+        int result = 0;
+        try {
+             result = query.insertInto(DSL.table("almacenamientos"),
+                    DSL.field("idAlma"),
+                    DSL.field("modelo"),
+                    DSL.field("capacidad"),
+                    DSL.field("precio"),
+                    DSL.field("tipo")).values(0, modeloAlma, capacidadAlma, precioAlma, tipoAlma).execute();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return result==1;
     }
 

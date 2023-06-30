@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 @WebServlet(name = "BuscarAlmaServlet", value = ("/buscarAlma"))
 public class BuscarAlmaServlet extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) {
+    }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    try {
         String modelo = request.getParameter("modelo");
         String capacidad = request.getParameter("capacidad");
         String precio = request.getParameter("precio");
@@ -29,9 +29,7 @@ public class BuscarAlmaServlet extends HttpServlet {
                 System.out.println("aasdas");
             }
         }
-    }catch (Exception e){
-        e.printStackTrace();
-        }
+        requestDispatcher.forward(request,response);
     }
 }
 
