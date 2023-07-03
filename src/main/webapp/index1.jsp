@@ -95,8 +95,10 @@
             </ul>
 
             <!---------------------------------------------------------------------------------------->
-
+            <div>
             <h6 class="text-light">Bienvenido usuario!</h6>
+                <a href="index.jsp" class="btn btn-primary">Cerrar Sesión</a>
+            </div>
                     </div>
                 </div>
             </div>

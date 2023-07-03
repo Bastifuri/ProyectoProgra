@@ -138,6 +138,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
+
                         <!--Campos para ingresar los datos-->
 
                         <div class="modal-body">
@@ -153,7 +154,7 @@
                                 </div>
                                 <br>
                                 <div class="modal-footer">
-                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Registrate</button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Registrate</button>
                                     <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cerrar</button>
                                 </div>
                             </form>
@@ -195,7 +196,7 @@
                         </a>
                     </div>
                     <div class="carousel-item" data-bs-interval="5000">
-                        <a href="pagina3.jsp">
+                        <a href="preensamble.jsp">
                             <img src="Imagenes/RDR2.jpg" class="d-block w-100" alt="Red dead Redemption 2">
                         </a>
                     </div>

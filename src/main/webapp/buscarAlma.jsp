@@ -100,15 +100,18 @@ d-flex justify-content-center">
         </li>
       </ul>
 
-      <!--Busqueda-->
-      <h6 class="text-light">Bienvenido Administrador</h6>
+      <div>
+        <h6 class="text-light">Bienvenido Administrador</h6>
+        <a href="index.jsp" class="btn btn-primary">Cerrar Sesión</a>
+      </div>
     </div>
   </div>
 </nav>
-
+<br><br>
+<!-------------------      Agregar Almacenamiento         ---------------------->
 <div class="container">
   <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col">
       <h2 align="center">Agregar Disco Duro</h2>
       <form action="agregarAlma" method="post">
         <div class="input-group input-group-sm mb-3">
@@ -131,13 +134,15 @@ d-flex justify-content-center">
         <br>
         <button type="submit" class="btn btn-success">Agregar</button>
       </form>
-
+    </div>
 <!-----------------   Busqueda de alma    ------------------->
+<div class="col">
       <h2 align="center">Ingrese algún campo para buscar y eliminar</h2>
-<main>
   <form action="buscarAlma" method="post">
     <input placeholder="Busqueda por modelo" name="modelo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    <br>
     <input placeholder="Busqueda por cantidad" name="capacidad" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+    <br>
     <input placeholder="Busqueda por el tipo" name="tipo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
     <br>
     <button type="submit" class="btn btn-primary">Buscar</button>
@@ -177,9 +182,8 @@ d-flex justify-content-center">
     </div>
   </div>
 </div>
-
-</main>
 </body>
+<br><br><br><br><br><br><br><br>
 <!--Pie de pagina-->
 <div class="container-fluid footer">
   <footer>
@@ -205,5 +209,4 @@ d-flex justify-content-center">
     </div>
   </footer>
 </div>
-
 </html>
