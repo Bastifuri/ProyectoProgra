@@ -64,36 +64,6 @@ public class almacenamientoDAO {
         }
         return almacenamientos;
     }
-
-
-    /* Metodo para agregar a la BD que recibe los parametros query y almacenamiento que es un objeto de la clase Almacenamientos*/
-    /*public boolean agregarAlma(Almacenamiento almacenamiento, DSLContext query) {
-
-        /*Se obtiene el nombre del modelo del objeto almacenamiento y se le asigna la variable modelo*/
-        /*String modelo = almacenamiento.getModelo();
-        int capacidad = almacenamiento.getCapacidad();
-        int precio = almacenamiento.getPrecio();
-        int result = 0;
-
-        /*Con el objeto query se realiza la insercion de datos en la tabla almacenamientos con el insertInto y esta diciendo que ingrese a la tabla almacenamientos
-        * y define tambien los nombres de las columnas de la tabla*/
-        /*try {
-            result = query.insertInto(DSL.table("almacenamientos"),
-                            DSL.field("Id_alma"),
-                            DSL.field("Modelo"),
-                            DSL.field("Capacidad"),
-                            DSL.field("Precio"))
-                    /*en values añade los valores a las tablas, null es para id autoincrementable*/
-                    /*.values(null, modelo, capacidad, precio).execute();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        /*Aqui se verifica si se añadio 1 fila a la tabla mediante el result == 1, si es si etnonces es true sino false*/
-       /*return result==1;
-    }*/
-
-
 }
 
 
