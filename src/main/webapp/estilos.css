@@ -47,15 +47,18 @@
     color: #ffffff;
     text-decoration: none;
 }
-.r-busqueda table{
-    text-align:center;
-    width:80%;
-    margin:auto;
-    justify-content:space-evenly;
+
+.r-busqueda table {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
 }
-.r-busqueda th{
+
+.r-busqueda th {
     border-bottom: 5px solid black;
 }
+
 .b-form {
     display: flex;
     flex-direction: column;

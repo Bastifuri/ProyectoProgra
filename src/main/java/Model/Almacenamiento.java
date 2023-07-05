@@ -9,11 +9,11 @@ import java.sql.Connection;
 import java.util.ArrayList;
 
 public class Almacenamiento {
-        private int idAlma;
-        private String modelo;
-        private String capacidad;
-        private String precio;
-        private String tipo;
+    private int idAlma;
+    private String modelo;
+    private String capacidad;
+    private String precio;
+    private String tipo;
 
     public Almacenamiento(int idAlma, String modelo, String capacidad, String precio, String tipo) {
         this.idAlma = idAlma;
@@ -54,6 +54,7 @@ public class Almacenamiento {
     public void setPrecio(String precio) {
         this.precio = precio;
     }
+
     public String getTipo() {
         return tipo;
     }
@@ -62,24 +63,25 @@ public class Almacenamiento {
         this.tipo = tipo;
     }
 
-    public boolean registrarAlma(){
-        Connection connection = DBConnector.connection("jbem","root","");
+    public boolean registrarAlma() {
+        Connection connection = DBConnector.connection("jbem", "root", "");
         DSLContext query = DSL.using(connection);
         return new almacenamientoDAO().registrarAlma(this, query);
     }
-    public ArrayList<Almacenamiento> buscarAlma(){
+
+    public ArrayList<Almacenamiento> buscarAlma() {
         System.out.println("buscarAlma");
-        Connection connection = DBConnector.connection("jbem","root","");
+        Connection connection = DBConnector.connection("jbem", "root", "");
         DSLContext query = DSL.using(connection);
-        ArrayList<Almacenamiento> almacenamientos = new almacenamientoDAO().buscarAlma(this,query);
+        ArrayList<Almacenamiento> almacenamientos = new almacenamientoDAO().buscarAlma(this, query);
         System.out.println("Ya se obtuvieron los almacenamientos");
         return almacenamientos;
     }
 
-    public boolean eliminarAlma(){
-        Connection connection = DBConnector.connection("jbem","root","");
+    public boolean eliminarAlma() {
+        Connection connection = DBConnector.connection("jbem", "root", "");
         DSLContext query = DSL.using(connection);
-        return new almacenamientoDAO().eliminarAlma(query,this);
+        return new almacenamientoDAO().eliminarAlma(query, this);
     }
 
 }

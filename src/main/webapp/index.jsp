@@ -6,15 +6,17 @@
 <head>
     <title>JBEM-Tienda de Hardware</title>
     <link rel="stylesheet" href="estilos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <body>
 
 <!--encabezado-->
 <header class="container-fluid custom-header d-flex justify-content-center">
-    <p class="mb-0 fs-6"><a href="mailto://soporte@jbem.cl" title="Escribenos" style="color: white"> Escribenos a soporte@jbem.cl ! </a></p>
+    <p class="mb-0 fs-6"><a href="mailto://soporte@jbem.cl" title="Escribenos" style="color: white"> Escribenos a
+        soporte@jbem.cl ! </a></p>
 </header>
 
-            <!---------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------->
 
 <!--Menu de pagina-->
 <nav class="navbar navbar-expand-lg color-navbar">
@@ -102,7 +104,8 @@
             </button>
 
             <!-- Modal para ingresar con una cuenta-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -112,14 +115,20 @@
                         <div class="modal-body">
                             <form action="logearusuario" method="post" class="text-center">
                                 <div class="form-group">
-                                <input type="text" name="rut" placeholder="Ingrese su rut" class="form-control" required><br>
+                                    <input type="text" name="rut" placeholder="Ingrese su rut" class="form-control"
+                                           required><br>
                                 </div>
                                 <div class="form-group">
-                                <input type="password" name="password" placeholder="Ingrese su contraseña" class="form-control" required><br>
+                                    <input type="password" name="password" placeholder="Ingrese su contraseña"
+                                           class="form-control" required><br>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Iniciar sesión</button>
-                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Registrate</button>
+                                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Iniciar
+                                        sesión
+                                    </button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal">Registrate
+                                    </button>
                                 </div>
                                 <p>${errorMessage}</p>
                             </form>
@@ -130,7 +139,8 @@
 
             <!--Pop Up para registrarse-->
 
-            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                 aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -150,12 +160,17 @@
                                     <input placeholder="Ingrese su rut" name="nombre" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <input placeholder="Ingrese su contraseña" name="password" type="password" class="form-control">
+                                    <input placeholder="Ingrese su contraseña" name="password" type="password"
+                                           class="form-control">
                                 </div>
                                 <br>
                                 <div class="modal-footer">
-                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Registrate</button>
-                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cerrar</button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle3"
+                                            data-bs-toggle="modal">Registrate
+                                    </button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle"
+                                            data-bs-toggle="modal">Cerrar
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -165,14 +180,14 @@
         </div>
     </div>
 </nav>
-            <!---------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------->
 
 </br>
 <div class="container">
 
-<h2 align="center"> PCs preensamblados con tus juegos favoritos!</h2>
+    <h2 align="center"> PCs preensamblados con tus juegos favoritos!</h2>
 
-<!--Carrusel-->
+    <!--Carrusel-->
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -214,57 +229,63 @@
             </div>
         </div>
     </div>
-<div>
-</div>
+    <div>
+    </div>
 
-            <!---------------------------------------------------------------------------------------->
+    <!---------------------------------------------------------------------------------------->
 
     <!--Seccion fotos-->
-<br>
-<h2 align="center">Ofertas imperdibles</h2>
-<div class="row">
-    <div class="col-4">
-        <div><a href="catalogoSSD.jsp"><img src="Imagenes/ofSSD.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;" title="Oferta de discos SSD"></a></div>
+    <br>
+    <h2 align="center">Ofertas imperdibles</h2>
+    <div class="row">
+        <div class="col-4">
+            <div><a href="catalogoSSD.jsp"><img src="Imagenes/ofSSD.png" class="img-thumbnail img-responsive"
+                                                style="border-color: #1F1D9C;" title="Oferta de discos SSD"></a></div>
+        </div>
+        <div class="col-4">
+            <div><img src="Imagenes/ofM.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;"
+                      title="Oferta de monitores"></div>
+            <br>
+            <div><img src="Imagenes/ofTG.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;"
+                      title="Oferta de tarjetas graficas"></div>
+        </div>
+        <div class="col-4">
+            <div><img src="Imagenes/ofP.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;"
+                      title="Oferta de perifericos"></div>
+        </div>
     </div>
-    <div class="col-4">
-        <div><img src="Imagenes/ofM.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;" title="Oferta de monitores"></div><br>
-        <div><img src="Imagenes/ofTG.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;" title="Oferta de tarjetas graficas"></div>
-    </div>
-    <div class="col-4">
-        <div><img src="Imagenes/ofP.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;" title="Oferta de perifericos"></div>
-    </div>
-</div>
 </div>
 <br>
 
-            <!---------------------------------------------------------------------------------------->
+<!---------------------------------------------------------------------------------------->
 
 
 <br/>
 <!--Pie de pagina-->
 <div class="container-fluid footer">
-<footer>
-    <div>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-3">
-                <h4>Ayuda</h4>
-                <ul>
-                    <li><a href="#">Centro de ayuda</a></li>
-                    <li><a href="#">Seguimiento de mi compra</a></li>
-                </ul></div>
-            <div class="col-md-3">
-                <h4>Nosotros</h4>
-                <ul>
-                    <li><a href="#">Quiénes somos</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
-                    <li><a href="#">Políticas de privacidad</a></li>
-                </ul>
+    <footer>
+        <div>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <h4>Ayuda</h4>
+                    <ul>
+                        <li><a href="#">Centro de ayuda</a></li>
+                        <li><a href="#">Seguimiento de mi compra</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Nosotros</h4>
+                    <ul>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Políticas de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3"></div>
             </div>
-            <div class="col-md-3"></div>
         </div>
-    </div>
-</footer>
+    </footer>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
@@ -273,7 +294,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </div>
 </body>
 </html>

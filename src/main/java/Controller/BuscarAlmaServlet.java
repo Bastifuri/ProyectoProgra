@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class BuscarAlmaServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
     }
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String modelo = request.getParameter("modelo");
         String capacidad = request.getParameter("capacidad");
@@ -29,7 +30,7 @@ public class BuscarAlmaServlet extends HttpServlet {
                 System.out.println("aasdas");
             }
         }
-        requestDispatcher.forward(request,response);
+        requestDispatcher.forward(request, response);
     }
 }
 

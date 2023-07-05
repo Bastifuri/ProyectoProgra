@@ -10,12 +10,14 @@
 <head>
     <title>Ofertas SSD!</title>
     <link rel="stylesheet" href="estilos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
 <!--encabezado-->
 <header class="container-fluid custom-header d-flex justify-content-center">
-    <p class="mb-0 fs-6"><a href="mailto://soporte@jbem.cl" title="Escribenos" style="color: white"> Escribenos a soporte@jbem.cl ! </a></p>
+    <p class="mb-0 fs-6"><a href="mailto://soporte@jbem.cl" title="Escribenos" style="color: white"> Escribenos a
+        soporte@jbem.cl ! </a></p>
 </header>
 
 <!---------------------------------------------------------------------------------------->
@@ -106,7 +108,8 @@
             </button>
 
             <!-- Modal para ingresar con una cuenta-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -116,14 +119,20 @@
                         <div class="modal-body">
                             <form action="logearusuario" method="post" class="text-center">
                                 <div class="form-group">
-                                    <input type="text" name="rut" placeholder="Ingrese su rut" class="form-control" required><br>
+                                    <input type="text" name="rut" placeholder="Ingrese su rut" class="form-control"
+                                           required><br>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="password" placeholder="Ingrese su contraseña" class="form-control" required><br>
+                                    <input type="password" name="password" placeholder="Ingrese su contraseña"
+                                           class="form-control" required><br>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Iniciar sesión</button>
-                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Registrate</button>
+                                    <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Iniciar
+                                        sesión
+                                    </button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal">Registrate
+                                    </button>
                                 </div>
                                 <p>${errorMessage}</p>
                             </form>
@@ -134,7 +143,8 @@
 
             <!--Pop Up para registrarse-->
 
-            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                 aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -150,15 +160,21 @@
                                     <input placeholder="Ingrese su Rut" name="rut" type="text" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <input placeholder="Ingrese su nombre" name="nombre" type="text" class="form-control">
+                                    <input placeholder="Ingrese su nombre" name="nombre" type="text"
+                                           class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <input placeholder="Ingrese su contraseña" name="password" type="password" class="form-control">
+                                    <input placeholder="Ingrese su contraseña" name="password" type="password"
+                                           class="form-control">
                                 </div>
                                 <br>
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-success" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Registrar</button>
-                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Cerrar</button>
+                                    <button type="submit" class="btn btn-success" data-bs-target="#exampleModalToggle"
+                                            data-bs-toggle="modal">Registrar
+                                    </button>
+                                    <button class="btn btn-secondary" data-bs-target="#exampleModalToggle"
+                                            data-bs-toggle="modal">Cerrar
+                                    </button>
                                 </div>
                             </form>
                         </div>
@@ -255,7 +271,8 @@
                     <ul>
                         <li><a href="#">Centro de ayuda</a></li>
                         <li><a href="#">Seguimiento de mi compra</a></li>
-                    </ul></div>
+                    </ul>
+                </div>
                 <div class="col-md-3">
                     <h4>Nosotros</h4>
                     <ul>

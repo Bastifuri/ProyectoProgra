@@ -42,16 +42,18 @@ public class Usuario {
     public void setPassword(String password) {
         this.password = password;
     }
-    public boolean registrarUsuario(){
-        Connection connection = DBConnector.connection("jbem","root","");
+
+    public boolean registrarUsuario() {
+        Connection connection = DBConnector.connection("jbem", "root", "");
         DSLContext query = DSL.using(connection);
         System.out.println("a");
-        return new UsuarioDAO().registrarUsuario(this,query);
+        return new UsuarioDAO().registrarUsuario(this, query);
     }
-    public ArrayList<Usuario> obtenerUsuario(){
-        Connection connection = DBConnector.connection("jbem","root","");
+
+    public ArrayList<Usuario> obtenerUsuario() {
+        Connection connection = DBConnector.connection("jbem", "root", "");
         DSLContext query = DSL.using(connection);
-        ArrayList<Usuario> usuarios = new UsuarioDAO().obtenerUsuarios(this,query);
+        ArrayList<Usuario> usuarios = new UsuarioDAO().obtenerUsuarios(this, query);
         System.out.println("a");
         return usuarios;
     }

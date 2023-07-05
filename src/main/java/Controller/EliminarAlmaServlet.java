@@ -12,17 +12,17 @@ import java.io.IOException;
 
 @WebServlet(name = "EliminarAlmaServlet", value = "/eliminarAlma")
 public class EliminarAlmaServlet extends HttpServlet {
-    public void doGet(HttpServletRequest request, HttpServletResponse response){
+    public void doGet(HttpServletRequest request, HttpServletResponse response) {
         int idAlma = Integer.parseInt(request.getParameter("idAlma"));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/buscarAlma.jsp");
-        Almacenamiento almacenamiento = new Almacenamiento(idAlma,"","","","");
-        if(almacenamiento.eliminarAlma()){
+        Almacenamiento almacenamiento = new Almacenamiento(idAlma, "", "", "", "");
+        if (almacenamiento.eliminarAlma()) {
             request.setAttribute("status", "Se ha eliminado correctamente el almacenamiento");
-        }else{
-            request.setAttribute("status","No se pudo realizar la acción");
+        } else {
+            request.setAttribute("status", "No se pudo realizar la acción");
         }
         try {
-            requestDispatcher.forward(request,response);
+            requestDispatcher.forward(request, response);
         } catch (ServletException | IOException e) {
             throw new RuntimeException(e);
         }

@@ -6,12 +6,14 @@
 <head>
     <title>JBEM-Tienda de Hardware</title>
     <link rel="stylesheet" href="estilos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <body>
 
 <!--encabezado-->
 <header class="container-fluid custom-header d-flex justify-content-center">
-    <p class="mb-0 fs-6"><a href="mailto://soporte@jbem.cl" title="Escribenos" style="color: white"> Escribenos a soporte@jbem.cl ! </a></p>
+    <p class="mb-0 fs-6"><a href="mailto://soporte@jbem.cl" title="Escribenos" style="color: white"> Escribenos a
+        soporte@jbem.cl ! </a></p>
 </header>
 
 <!---------------------------------------------------------------------------------------->
@@ -96,13 +98,13 @@
 
             <!---------------------------------------------------------------------------------------->
             <div>
-            <h6 class="text-light">Bienvenido usuario!</h6>
+                <h6 class="text-light">Bienvenido usuario!</h6>
                 <a href="index.jsp" class="btn btn-primary">Cerrar Sesión</a>
             </div>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
 </nav>
 <!---------------------------------------------------------------------------------------->
@@ -165,14 +167,19 @@
     <h2 align="center">Ofertas imperdibles</h2>
     <div class="row">
         <div class="col-4">
-            <div><a href="catalogoSSD.jsp"><img src="Imagenes/ofSSD.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;" title="Oferta de discos SSD"></a></div>
+            <div><a href="catalogoSSD.jsp"><img src="Imagenes/ofSSD.png" class="img-thumbnail img-responsive"
+                                                style="border-color: #1F1D9C;" title="Oferta de discos SSD"></a></div>
         </div>
         <div class="col-4">
-            <div><img src="Imagenes/ofM.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;" title="Oferta de monitores"></div><br>
-            <div><img src="Imagenes/ofTG.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;" title="Oferta de tarjetas graficas"></div>
+            <div><img src="Imagenes/ofM.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;"
+                      title="Oferta de monitores"></div>
+            <br>
+            <div><img src="Imagenes/ofTG.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;"
+                      title="Oferta de tarjetas graficas"></div>
         </div>
         <div class="col-4">
-            <div><img src="Imagenes/ofP.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;" title="Oferta de perifericos"></div>
+            <div><img src="Imagenes/ofP.png" class="img-thumbnail img-responsive" style="border-color: #1F1D9C;"
+                      title="Oferta de perifericos"></div>
         </div>
     </div>
 </div>
@@ -193,7 +200,8 @@
                     <ul>
                         <li><a href="#">Centro de ayuda</a></li>
                         <li><a href="#">Seguimiento de mi compra</a></li>
-                    </ul></div>
+                    </ul>
+                </div>
                 <div class="col-md-3">
                     <h4>Nosotros</h4>
                     <ul>
@@ -214,7 +222,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
         integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </div>
 </body>
 </html>

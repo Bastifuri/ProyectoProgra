@@ -22,7 +22,7 @@ public class UsuarioDAO {
         try {
             results = query.insertInto(usuarioTabla, columnas[0], columnas[1], columnas[2])
                     .values(rut, nombre, password).execute();
-        } catch (Exception e){
+        } catch (Exception e) {
             System.err.println("No se pudo ejecutar la consulta : " + e.getMessage());
         }
         return results == 1;

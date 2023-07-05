@@ -5,6 +5,8 @@
   Time: 16:04
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,7 +19,7 @@
 <div class="container">
     <div class="col">
         <h2 align="center">Ingrese algún campo para buscar y eliminar</h2>
-        <form action="buscarAlma" method="post">
+        <form action="buscarPC" method="post">
             <select id="tipo" name="nombre" class="form-select form-select-sm" aria-label="Default select example"
                     required>
                 <option align="center" selected>Indique cual es su preferida</option>
@@ -42,24 +44,14 @@
             <table class="table">
                 <tr>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Almacenamiento</th>
-                    <th scope="col">Fuente de poder</th>
-                    <th scope="col">Placa madre</th>
-                    <th scope="col">Procesador</th>
-                    <th scope="col">Tarjeta Grafica</th>
-                    <th scope="col">Tarjeta RAM</th>
-                    <th scope="col">Refrigeración</th>
-                    <th scope="col">Gabinete</th>
-
-
+                    <th scope="col">Juego</th>
+                    <th scope="col">Modelo del Procesador</th>
                 </tr>
-                <c:forEach items="${pcbarato}" var="pcbarato">
+                <c:forEach items="${pcbarato}" var="pc">
                     <tr>
-                        <td>${almacenamiento.getIdAlma()}</td>
-                        <td><c:out value="${almacenamiento.getModelo()}"></c:out></td>
-                        <td><c:out value="${almacenamiento.getCapacidad()}"></c:out></td>
-                        <td><c:out value="${almacenamiento.getPrecio()}"></c:out></td>
-                        <td><c:out value="${almacenamiento.getTipo()}"></c:out></td>
+                        <td><c:out value="${pc.nombre}" /></td>
+                        <td><c:out value="${pc.juego}" /></td>
+                        <td><c:out value="${pc.procesador}" /></td>
                     </tr>
                 </c:forEach>
             </table>
