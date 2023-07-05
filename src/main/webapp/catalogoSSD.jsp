@@ -179,8 +179,9 @@
                 <img class="card-img-top" src="Catalogo/870crucial.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Samsung 870 EVO</h5>
+                    <p class="card-text">Disco SSD 500 MB</p>
                     <p class="card-text">$ 19.990</p>
-                    <a href="#" class="btn btn-primary">View Product</a>
+                    <a href="carrito.jsp" class="btn btn-primary">Ir al carro</a>
                 </div>
             </div>
         </div>
@@ -189,8 +190,9 @@
                 <img class="card-img-top" src="Catalogo/bx500.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Crucial BX500</h5>
+                    <p class="card-text">Disco SSD 240 MB</p>
                     <p class="card-text">$ 19.990</p>
-                    <a href="#" class="btn btn-primary">View Product</a>
+                    <a href="#" class="btn btn-primary">Ir al carro</a>
                 </div>
             </div>
         </div>
@@ -199,8 +201,9 @@
                 <img class="card-img-top" src="Catalogo/kc2500.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Kingston KC2500 NVMe</h5>
+                    <p class="card-text">Disco SSD 1 TB</p>
                     <p class="card-text">$ 39.990</p>
-                    <a href="#" class="btn btn-primary">View Product</a>
+                    <a href="#" class="btn btn-primary">Ir al carro</a>
                 </div>
             </div>
         </div>
@@ -209,8 +212,9 @@
                 <img class="card-img-top" src="Catalogo/crucialp2.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Crucial P2 NVMe</h5>
+                    <p class="card-text">Disco SSD 500 MB</p>
                     <p class="card-text">$ 21.990</p>
-                    <a href="#" class="btn btn-primary">View Product</a>
+                    <a href="#" class="btn btn-primary">Ir al carro</a>
                 </div>
             </div>
         </div>
@@ -219,8 +223,9 @@
                 <img class="card-img-top" src="Catalogo/firecuda.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Seagate FireCuda</h5>
+                    <p class="card-text">Disco SSD 2 TB</p>
                     <p class="card-text">$ 55.990</p>
-                    <a href="#" class="btn btn-primary">View Product</a>
+                    <a href="#" class="btn btn-primary">Ir al carro</a>
                 </div>
             </div>
         </div>
@@ -229,8 +234,9 @@
                 <img class="card-img-top" src="Catalogo/mx500.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Crucial MX500</h5>
+                    <p class="card-text">Disco SSD 1 TB</p>
                     <p class="card-text">$ 43.990</p>
-                    <a href="#" class="btn btn-primary">View Product</a>
+                    <a href="#" class="btn btn-primary">Ir al carro</a>
                 </div>
             </div>
         </div>
